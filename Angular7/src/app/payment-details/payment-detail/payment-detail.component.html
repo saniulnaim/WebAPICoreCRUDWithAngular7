@@ -1,0 +1,43 @@
+<form #form="ngForm" autocomplete="off">
+  <div vocab="form-group">
+    <div class="input-group">
+      <div class="input-group-prepend">
+        <div class="input-group-text bg-white">
+          <i class="fal fa-user"></i>
+        </div>
+      </div>
+      <input name="CardOwnerName" #CardOwnerName="ngModel" [(ngModel)]="service.CardOwnerName" class="form-control" placeholder="Card Owner Name" />
+    </div>
+  </div>
+
+  <div vocab="form-group">
+    <div class="input-group">
+      <div class="input-group-prepend">
+        <div class="input-group-text bg-white">
+          <i class="fal fa-user"></i>
+        </div>
+      </div>
+      <input name="CardNumber" #CardNumber="ngModel" [(ngModel)]="service.CardNumber" class="form-control" placeholder="Card Number" />
+    </div>
+  </div>
+
+  <div vocab="form-group">
+    <div class="input-group">
+      <div class="input-group-prepend">
+        <div class="input-group-text bg-white">
+          <i class="fal fa-user"></i>
+        </div>
+      </div>
+      <input name="ExpirationDate" #ExpirationDate="ngModel" [(ngModel)]="service.ExpirationDate" class="form-control" placeholder="Expiration Date" />
+    </div>
+  </div>
+  <div vocab="form-group">
+    <div class="input-group">
+      <div class="input-group-prepend">
+        <div class="input-group-text bg-white">
+          <i class="fal fa-user"></i>
+        </div>
+      </div>
+      <input name="CVV" #CVV="ngModel" [(ngModel)]="service.CVV" class="form-control" placeholder="CVV" />
+    </div>
+  </div></form>
