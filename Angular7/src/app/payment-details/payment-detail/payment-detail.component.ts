@@ -15,9 +15,9 @@ export class PaymentDetailComponent implements OnInit {
     this.resetForm();
   }
 
-  resetForm(form: NgForm) {
+  resetForm(form?: NgForm) {
     if(form != null)
-    form.resetForm();
+        form.resetForm();
     this.service.formData = {
       PMId:0,
       CardOwnerName: '',
@@ -27,4 +27,14 @@ export class PaymentDetailComponent implements OnInit {
     }
   }
 
+  onSubmit(form: NgForm) {
+    this.service.postPaymentDetail(form.value).subscribe(
+      res => {
+        this.resetForm(form);
+      },
+      err => {
+        console.log(err);
+      }
+    )
+  }
 }

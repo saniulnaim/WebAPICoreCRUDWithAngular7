@@ -57,6 +57,18 @@ namespace WebAPICoreCRUD.Controllers
             return NoContent();
         }
 
+        [HttpGet("{id}")]
+        public async Task<ActionResult<PaymentDetail>> GetPaymentDetail(int id)
+        {
+            var paymentDetail = await _context.PaymentDetail.FindAsync(id);
+
+            if(paymentDetail == null)
+            {
+                return NotFound();
+            }
+            return paymentDetail;
+        }
+
         // POST: api/PaymentDetail
         [HttpPost]
         public async Task<ActionResult<PaymentDetail>> PostPaymentDetail(PaymentDetail paymentDetail)
