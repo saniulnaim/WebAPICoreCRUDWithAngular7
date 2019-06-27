@@ -4,10 +4,10 @@
     <div class="input-group">
       <div class="input-group-prepend">
         <div class="input-group-text bg-white">
-          <i class="fal fa-user" [class.green-icon]="CardOwnerName.valid" [class.red-icon]="CardOwnerName.invalid && CardOwnerName.touched"></i>
+          <i class="fal fa-user" [class.green-icon]="CartOwnerName.valid" [class.red-icon]="CartOwnerName.invalid && CartOwnerName.touched"></i>
         </div>
       </div>
-      <input required name="CardOwnerName" #CardOwnerName="ngModel" [(ngModel)]="service.formData.CardOwnerName" class="form-control" placeholder="Card Owner Name" />
+      <input required name="CartOwnerName" #CartOwnerName="ngModel" [(ngModel)]="service.formData.CartOwnerName" class="form-control" placeholder="Card Owner Name" />
     </div>
   </div>
 
